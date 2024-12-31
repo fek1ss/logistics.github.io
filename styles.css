@@ -1,0 +1,502 @@
+/* General styles */
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  color: #333; /* Changed text color to dark for better readability */
+}
+
+/* Header */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 1000; /* Ensure the header stays on top of other content */
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 20px;
+  background-color: #001F3F;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Add shadow for better visibility */
+  height: 130px;
+}
+
+
+.logo {
+  display: flex;
+  flex-direction: column; 
+  align-items: center; 
+  justify-content: center; 
+  text-align: center; 
+  margin-bottom: 20px; 
+}
+
+.logo img {
+  border-radius: 50%;
+  width: 60px; 
+  height: 60px; 
+  object-fit: cover; 
+  margin-bottom: 15px;
+}
+
+.logo h1 {
+  color: #fff;
+  font-size: 20px; 
+  font-weight: bold;
+  letter-spacing: 2px; 
+  text-transform: uppercase; 
+  margin: 0;
+  padding: 0;
+  text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.7); /* Добавляем тень для текста */
+}
+
+
+
+
+nav ul {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+
+nav ul li {
+  margin-left: 20px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+  font-weight: bold;
+}
+
+nav ul li a:hover{
+  color: #dcdbdb;
+}
+
+.contact-info {
+  text-align: right;
+}
+.contact-info p{
+  color: #fff;
+}
+
+.contact-info .whatsapp {
+  background-color: #25D366;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 5px;
+  text-decoration: none;
+}
+
+
+/* Hero Section */
+.hero {
+  position: relative;
+  height: 70vh;
+  background: url('images/logistik.webp') no-repeat center center/cover;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white; /* Ensure text is white over dark background */
+}
+
+.hero .overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.6);
+  z-index: 1;
+}
+
+.hero-content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+}
+
+.hero h2 {
+  font-size: 3rem;
+  margin: 0;
+  animation: fadeInDown 2s ease;
+}
+
+.hero p {
+  font-size: 1.5rem;
+  animation: fadeInUp 2s ease;
+}
+
+/* Keyframes for animations */
+@keyframes fadeInDown {
+  from {
+      opacity: 0;
+      transform: translateY(-20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+      opacity: 0;
+      transform: translateY(20px);
+  }
+  to {
+      opacity: 1;
+      transform: translateY(0);
+  }
+}
+
+/* Footer Section */
+footer {
+  background-color: #001F3F;
+  text-align: center;
+  padding: 10px;
+  color: #fff; /* Ensure footer text is white */
+}
+
+/* Services Section */
+.services {
+  padding: 50px 0;
+  background-color: #f9f9f9;
+  opacity: 1; /* Removed opacity to ensure visibility */
+  transform: translateY(0); /* Removed transform to avoid displacement */
+  transition: all 0.5s ease;
+}
+
+.services h2 {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.service-list {
+  margin: 20px;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.service-item {
+  flex: 1 1 calc(33.333% - 20px);
+  background: white;
+  padding: 20px;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+/* About Section */
+/* About Section */
+.about {
+  padding: 50px 20px;
+  opacity: 1;
+  transform: translateY(0);
+  background-color: #f9f9f9; /* Optional: background color to distinguish the section */
+  margin-top: 30px; /* Adds space above */
+  margin-bottom: 30px; /* Adds space below */
+}
+
+.about .container {
+  text-align: center; /* Centers the text */
+  max-width: 800px;
+  margin: 0 auto; /* Centers the container horizontally */
+}
+
+.about h2 {
+  font-size: 2rem;
+  margin-bottom: 20px;
+  color: #003366; /* Dark blue for the heading */
+}
+
+.about p {
+  font-size: 1.2rem;
+  line-height: 1.6;
+  color: #333; /* Darker text for better readability */
+  margin: 0 auto;
+  max-width: 700px; /* Limits the paragraph width */
+  padding: 20px;
+  background-color: #fff; /* Optional: Adds background for the text */
+  border-radius: 5px; /* Optional: Rounded corners */
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Optional: Adds a subtle shadow */
+}
+
+
+
+.workflow {
+  background-color: #f9f9f9;
+  padding: 50px 0;
+  text-align: center;
+}
+
+.workflow h2 {
+  font-size: 2em;
+  color: #2c3e50;
+  margin-bottom: 10px;
+}
+
+.workflow p {
+  font-size: 1.2em;
+  color: #34495e;
+  margin-bottom: 30px;
+}
+
+.cards {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  flex-wrap: wrap;
+
+}
+
+.card {
+  background-color: #fff;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  max-width: 200px;
+  padding: 20px;
+  text-align: center;
+  transition: transform 0.3s;
+}
+
+.card img {
+  width: 100%;
+  border-radius: 8px 8px 0 0;
+}
+
+.card h3 {
+  font-size: 1.5em;
+  color: #2c3e50;
+  margin: 15px 0;
+}
+
+.card p {
+  font-size: 1em;
+  color: #7f8c8d;
+  margin-bottom: 20px;
+}
+
+.card .btn {
+  background-color: #3498db;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 1em;
+  transition: background-color 0.3s;
+}
+
+.card .btn:hover {
+  background-color: #2980b9;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+
+/* Секция формы */
+.contact {
+  background: linear-gradient(135deg, #0066cc, #003366);
+  padding: 60px 30px;
+  border-radius: 15px;
+  color: #ffffff;
+  text-align: center;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+  max-width: 800px;
+  margin: 40px auto;
+}
+
+.contact h2 {
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 15px;
+  color: #ffffff;
+  text-transform: uppercase;
+  letter-spacing: 1.5px;
+}
+
+.contact p {
+  margin-bottom: 40px;
+  font-size: 18px;
+  color: #e6e6e6;
+}
+
+/* Стили формы */
+.contact-form {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  padding: 10px;
+}
+
+.form-group {
+  text-align: left;
+}
+
+.form-group label {
+  font-size: 14px;
+  font-weight: bold;
+  color: #cce6ff;
+  margin-bottom: 10px;
+  display: block;
+  text-transform: uppercase;
+}
+
+.form-group input,
+.form-group textarea {
+  width: 100%;
+  max-width: 750px;  /* Ограничиваем максимальную ширину */
+  padding: 12px 15px;
+  font-size: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 8px;
+  background-color: rgba(255, 255, 255, 0.1);
+  color: #ffffff;
+  box-shadow: inset 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: border 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+  margin: 0 auto;  /* Центрируем элемент */
+}
+
+
+
+.form-group input::placeholder,
+.form-group textarea::placeholder {
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.form-group input:focus,
+.form-group textarea:focus {
+  border-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.2);
+  box-shadow: 0 0 8px rgba(255, 255, 255, 0.5);
+  outline: none;
+}
+
+/* Кнопка */
+.btnForm {
+  background: linear-gradient(135deg, #ffffff, #e6e6e6);
+  color: #003366;
+  font-size: 16px;
+  font-weight: bold;
+  padding: 15px 25px;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: transform 0.3s ease, background-color 0.3s ease, box-shadow 0.3s ease;
+  text-transform: uppercase;
+}
+
+.btnForm:hover {
+  background: linear-gradient(135deg, #cce6ff, #b3d9ff);
+  box-shadow: 0 5px 15px rgba(0, 102, 204, 0.3);
+  transform: translateY(-3px);
+}
+
+.btnForm:active {
+  transform: translateY(1px);
+  box-shadow: 0 3px 10px rgba(0, 102, 204, 0.2);
+}
+
+/* Адаптация для мобильных */
+@media (max-width: 768px) {
+  .contact {
+      padding: 40px 20px;
+  }
+
+  .contact h2 {
+      font-size: 28px;
+  }
+
+  .contact p {
+      font-size: 16px;
+  }
+}
+
+
+/* Media Queries */
+@media (max-width: 768px) {
+  .service-item {
+    flex: 1 1 100%;
+  }
+
+  .contact form {
+    width: 100%;
+  }
+}
+
+
+.advantages {
+  background-color: #f9f9f9;
+  padding: 50px 20px;
+}
+
+.advantages-content {
+  display: flex;
+  align-items: stretch; /* Выравнивание элементов по высоте */
+  height: 100%; /* Высота на всю секцию */
+  min-height: 400px; /* Минимальная высота, чтобы секция не сжималась */
+}
+
+.advantages-text {
+  flex: 1; /* Текст занимает доступное пространство */
+  padding: 20px;
+}
+
+.advantages h2 {
+  font-size: 2em;
+  color: #002366;
+  margin-bottom: 20px;
+}
+
+.advantages p {
+  font-size: 1.2em;
+  color: #002366;
+  line-height: 1.5;
+  margin-bottom: 40px;
+}
+
+.advantages-list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr); /* Две колонки */
+  gap: 20px; /* Расстояние между элементами */
+  margin-top: 20px;
+}
+
+.advantage-item {
+  background-color: #fff;
+  border: 1px solid #e0e0e0;
+  border-radius: 10px;
+  padding: 20px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.advantage-item h3 {
+  font-size: 1.5em;
+  color: #002366;
+  margin-bottom: 10px;
+}
+
+.advantage-item p {
+  font-size: 1em;
+  color: #555;
+  line-height: 1.6;
+}
+
+.advantages-image {
+  flex: 1; /* Картинка занимает доступное пространство */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.advantages-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Картинка заполняет блок, сохраняя пропорции */
+  border-radius: 10px; /* Опционально: закругление краев */
+}
